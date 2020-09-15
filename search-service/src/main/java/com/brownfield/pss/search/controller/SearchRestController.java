@@ -1,4 +1,4 @@
-package com.brownfield.pss.search.controller;
+package com.brownfield.pss.search.component;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.brownfield.pss.search.controller.SearchQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.brownfield.pss.search.component.SearchComponent;
 import com.brownfield.pss.search.entity.Flight;
-
 /**
  * @author bhavesh_rajdev
  *
