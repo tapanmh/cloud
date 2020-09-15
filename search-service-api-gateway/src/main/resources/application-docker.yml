@@ -1,0 +1,28 @@
+server:
+  port: 8095
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: search-service-api-gateway
+  client:
+    serviceUrl:
+      defaultZone: http://172.17.0.1:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      preferIpAddress: true
+  healthcheck:
+    enabled: true
+
+zuul:
+  host:
+    connect-timeout-millis: 5000000
+    socket-timeout-millis: 5000000
+  ignoredServices: '*'
+  routes:
+    search-service:
+      path: /api/**
+      serviceId: search-service
+      stripPrefix: true
+

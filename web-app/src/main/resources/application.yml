@@ -1,0 +1,20 @@
+server:
+  port: 8002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://172.17.0.1:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      preferIpAddress: true
+  healthcheck:
+    enabled: true
+
+
+#security:
+  #user:
+    #name: guest
+    #password: guest123

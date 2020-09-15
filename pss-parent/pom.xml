@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.brownfield</groupId>
+	<artifactId>pss-parent</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+
+	<modules>
+		<module>../booking-service</module>
+		<module>../booking-service-api-gateway</module>
+		<module>../checkin-service</module>
+		<module>../checkin-service-api-gateway</module>
+		<module>../config-service</module>
+		<module>../eureka-server</module>
+		<module>../fares-service</module>
+		<module>../fares-service-api-gateway</module>
+		<module>../search-service</module>
+		<module>../search-service-api-gateway</module>
+		<module>../web-app</module>
+		<module>../hystrixdashboard</module>
+	</modules>
+
+
+</project>

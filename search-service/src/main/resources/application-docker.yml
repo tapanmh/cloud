@@ -1,0 +1,31 @@
+spring:
+  rabbitmq:
+    host: 172.17.0.3
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        inventoryQ:
+          destination: inventoryQ
+server:
+  port: 8090
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: search-service
+  client:
+    serviceUrl:
+      defaultZone: http://172.17.0.1:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      preferIpAddress: true
+  healthcheck:
+    enabled: true
+
+originairports:
+  shutdown: JFK
+
