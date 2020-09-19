@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+eureka:
+  instance:
+    preferIpAddress: true
+    ip-address: ${MANAGED_IP}
+    hostname: fares-service
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER}:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      preferIpAddress: true
+  healthcheck:
+    enabled: true

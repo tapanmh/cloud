@@ -1,0 +1,29 @@
+spring:
+  rabbitmq:
+    host: ${RABBIT_MQ_SERVER}
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        checkInQ:
+          destination: checkInQ
+
+server:
+  port: 8070
+
+eureka:
+  instance:
+    preferIpAddress: true
+    ip-address: ${MANAGED_IP}
+    hostname: checkin-service
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER}:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      preferIpAddress: true
+  healthcheck:
+    enabled: true
